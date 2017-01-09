@@ -5,11 +5,11 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
 
-  entry: './src/js/test.js',
+  entry: './src/js/index.js',
 
   output: {
     path: './dist',
-    filename: 'test.js',
+    filename: 'mdn.js',
   },
 
   module: {
@@ -39,5 +39,9 @@ export default {
   ],
 
   devtool: 'source-map',
+
+  devServer: {
+    inline: true
+  },
 
 };
