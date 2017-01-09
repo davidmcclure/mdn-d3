@@ -1,11 +1,14 @@
 
 
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+
 export default {
 
   entry: './src/js/test.js',
 
   output: {
-    path: './_site',
+    path: './dist',
     filename: 'test.js',
   },
 
@@ -20,6 +23,8 @@ export default {
 
     ]
   },
+
+  plugins: [new HtmlWebpackPlugin()],
 
   devtool: 'source-map',
 
