@@ -21,10 +21,19 @@ export default {
         loader: 'babel-loader',
       },
 
+      {
+        test: /\.pug$/,
+        loader: 'pug',
+      },
+
     ]
   },
 
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.pug'
+    })
+  ],
 
   devtool: 'source-map',
 
