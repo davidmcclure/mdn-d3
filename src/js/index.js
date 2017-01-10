@@ -2,12 +2,20 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Radium from 'radium';
 
 
+@Radium
 class Test extends Component {
 
   render() {
-    return <h1>Test3</h1>;
+
+    const styles = {
+      color: 'red',
+    };
+
+    return <h1 style={styles}>Test3</h1>;
+
   }
 
 }
